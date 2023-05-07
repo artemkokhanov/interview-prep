@@ -1,4 +1,4 @@
-def topKFrequent(self, nums: list[int], k: int) -> list[int]:
+def topKFrequent(nums: list[int], k: int) -> list[int]:
     count = {}
     freq = [[] for i in range(len(nums) + 1)]
 
