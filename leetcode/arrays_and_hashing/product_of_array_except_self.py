@@ -10,5 +10,5 @@ def productExceptSelf(nums: list[int]) -> list[int]:
     for i in range(len(nums)-1, -1, -1):
         result[i] *= postfix
         postfix *= nums[i]
-    
+
     return result

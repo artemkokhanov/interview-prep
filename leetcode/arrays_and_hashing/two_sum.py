@@ -6,7 +6,7 @@ def twoSum(nums: list[int], target: int) -> list[int]:
 
         if diff in prevMap:
             return [prevMap[diff], index]
-        
+
         prevMap[value] = index
-    
+
     return
