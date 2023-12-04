@@ -1,4 +1,4 @@
-def topKFrequent(nums: list[int], k: int) -> list[int]:
+def top_k_frequent_elements(nums, k):
     count = {}
     freq = [[] for i in range(len(nums) + 1)]
 

@@ -1,10 +1,10 @@
-def containsDuplicate(nums: list[int]) -> bool:
-    mySet = set()
+def contains_duplicate(nums):
+    my_set = set()
 
     for num in nums:
-        if num in mySet:
+        if num in my_set:
             return True
 
-        mySet.add(num)
+        my_set.add(num)
 
     return False

@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 
-def groupAnagrams(strs: list[str]) -> list[list[str]]:
+def group_anagrams(strs):
     result = defaultdict(list)
 
     for string in strs:
