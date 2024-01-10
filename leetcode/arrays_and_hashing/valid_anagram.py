@@ -1,5 +1,13 @@
-from collections import Counter
+def valid_anagram(s: str, t: str) -> bool:
+    if len(s) != len(t):
+        return False
 
+    countS = {}
+    countT = {}
 
-def valid_anagram(s, t):
-    return Counter(s) == Counter(t)
+    for i in range(len(s)):
+        print(i)
+        countS[s[i]] = 1 + countS.get(s[i], 0)
+        countT[t[i]] = 1 + countT.get(t[i], 0)
+
+    return countS == countT
