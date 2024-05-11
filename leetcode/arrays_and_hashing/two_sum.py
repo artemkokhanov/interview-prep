@@ -2,8 +2,7 @@ from typing import List
 
 
 def twoSum(nums: List[int], target: int) -> list[int] | None:
-    # mapping -> value : index
-    prevMap = {}
+    prevMap = {}  # mapping -> value : index
 
     for index, value in enumerate(nums):
         diff = target - value
