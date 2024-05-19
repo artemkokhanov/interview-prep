@@ -1,16 +1,15 @@
 from typing import List
 
 
-def twoSum(nums: List[int], target: int) -> list[int] | None:
-    # mapping -> value : index
-    prevMap = {}
+def two_sum(nums: List[int], target: int) -> list[int] | None:
+    prev_map = {}
 
     for index, value in enumerate(nums):
         diff = target - value
 
-        if diff in prevMap:
-            return [prevMap[diff], index]
+        if diff in prev_map:
+            return [prev_map[diff], index]
 
-        prevMap[value] = index
+        prev_map[value] = index
 
     return
