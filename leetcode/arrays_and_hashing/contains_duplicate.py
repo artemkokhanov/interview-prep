@@ -1,10 +1,13 @@
-def contains_duplicate(nums):
-    my_set = set()
+from typing import List
+
+
+def containsDuplicate(nums: List[int]) -> bool:
+    mySet = set()
 
     for num in nums:
-        if num in my_set:
+        if num in mySet:
             return True
 
-        my_set.add(num)
+        mySet.add(num)
 
     return False
