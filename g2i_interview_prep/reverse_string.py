@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/reverse-string/description/
+
 def reverse_string(s: str) -> str:
     str_list = list(s)
 
