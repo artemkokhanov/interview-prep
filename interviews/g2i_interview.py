@@ -1,3 +1,4 @@
+# this solution is simpler, overcomplicated the reverse_number_solution method
 def reverse_number(num):
     reverse = str(num)[::-1]
     return reverse
