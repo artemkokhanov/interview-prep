@@ -3,7 +3,7 @@ def is_valid(s: str) -> bool:
     hash_map = {')': '(', '}': '{', ']': '['}
 
     for c in s:
-        if c in hash_map:
+        if c in hash_map: # in checks the keys not the values
             if stack and stack[-1] == hash_map[c]:
                 stack.pop()
             else:
