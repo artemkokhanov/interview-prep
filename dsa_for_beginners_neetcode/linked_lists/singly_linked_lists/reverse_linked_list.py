@@ -21,6 +21,7 @@ class iterativeSolution:
             curr = nxt  # shifting current node to next node to reverse
         return prev  # returning new head
 
+
 # recursive solution has time complexity O(n) and space complexity O(1)
 class recursiveSolution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
@@ -28,9 +29,9 @@ class recursiveSolution:
             return None
 
         newHead = head  # current node we are at with recursive call
-        if head.next: # "if there is still a sub-problem"
+        if head.next:  # "if there is still a sub-problem"
             newHead = self.reverseList(head.next)
-            head.next.next = head # reversing the link between the next node and head
+            head.next.next = head  # reversing the link between the next node and head
         head.next = None
 
         return newHead

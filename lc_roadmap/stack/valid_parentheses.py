@@ -1,10 +1,10 @@
 def is_valid(s: str) -> bool:
     stack = []
-    hash_map = {')': '(', '}': '{', ']': '['}
+    closeToOpen = {')': '(', '}': '{', ']': '['}
 
     for c in s:
-        if c in hash_map: # in checks the keys not the values
-            if stack and stack[-1] == hash_map[c]:
+        if c in closeToOpen:  # in checks the keys not the values
+            if stack and stack[-1] == closeToOpen[c]:
                 stack.pop()
             else:
                 return False

@@ -5,6 +5,7 @@ def arguments_example(*args, **kwargs):
     print(args[0] + args[1])
     print(kwargs['a'] + kwargs['b'])
 
+
 # arguments_example(1, 2, 3, a=4, b=5)
 
 
@@ -15,13 +16,17 @@ def log_decorator(func):
         result = func(*args, **kwargs)
         print(f"Function returned result {result}")
         return result
+
     return wrapper
+
 
 @log_decorator
 def add(a, b):
     return a + b
 
+
 add(3, 4)
+
 
 ########################################################################################################################
 
@@ -32,8 +37,10 @@ def fibonacci(n):
         yield a
         a, b = b, a + b
 
+
 for num in fibonacci(5):
     print(num)
+
 
 ########################################################################################################################
 
@@ -70,10 +77,12 @@ class Subscriber:
     def update(self, book):
         print(f"{self.name} has been notified about the new book: {book.title}")
 
+
 class Book:
     def __init__(self, title, author):
         self.title = title
         self.author = author
+
 
 library = Library()
 john = Subscriber("John Doe")
@@ -92,10 +101,12 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
+
 @app.route('/greet', methods=['GET'])
 def greet():
     """Endpoint to return a greeting message"""
     return jsonify({"message": "Hello, welcome to our service!"})
+
 
 @app.route('/square', methods=['POST'])
 def square():
@@ -103,6 +114,7 @@ def square():
     data = request.get_json()
     number = data.get("number", 0)
     return jsonify({"result": number ** 2})
+
 
 if __name__ == '__main__':
     app.run(debug=True)

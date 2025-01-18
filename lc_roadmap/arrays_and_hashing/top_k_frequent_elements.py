@@ -11,7 +11,7 @@ def top_k_frequent_elements(nums, k):
         freq[c].append(num)
 
     result = []
-    for i in range(len(freq)-1, 0, -1):
+    for i in range(len(freq) - 1, 0, -1):
         for j in freq[i]:
             result.append(j)
 

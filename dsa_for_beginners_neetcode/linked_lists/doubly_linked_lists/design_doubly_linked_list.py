@@ -8,7 +8,7 @@ class ListNode:
 class MyLinkedList:
     # 0-indexed
     def __init__(self, val):
-        self.left = ListNode(0)   # left and right nodes are used as dummy nodes so it is
+        self.left = ListNode(0)  # left and right nodes are used as dummy nodes so it is
         self.right = ListNode(0)  # easier to deal with edge cases. Everything occurs between these nodes
         self.left.next = self.right
         self.right.prev = self.left
