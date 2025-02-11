@@ -11,10 +11,10 @@ class ListNode:
 
 # time complexity O(n)
 # space complexity O(1)
-def reverseListTwoPointer(head: Optional[ListNode]) -> Optional[ListNode]:
+def reverseListIterativelyTwoPointer(head: Optional[ListNode]) -> Optional[ListNode]:
     prev, curr = None, head
 
-    while curr:
+    while curr:  # make sure current node is not None
         nxt = curr.nxt  # store the link to the next node
 
         curr.nxt = prev  # reversing the link to the next node
