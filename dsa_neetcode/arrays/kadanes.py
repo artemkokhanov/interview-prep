@@ -1,3 +1,5 @@
+# Q: Find a non-empty subarray with the largest sum
+
 # Kadane's Algorithm: O(n)
 def kadanes(nums):
     maxSum = nums[0]
@@ -10,8 +12,9 @@ def kadanes(nums):
     return maxSum
 
 
-# Return the left and right index of the max subarray sum,
+# Q: Return the left and right index of the max subarray sum,
 # assuming there's exactly one result (no ties).
+# I.e., same question as above but we must return the indices of the beginning and end of the subarray
 # Sliding window variation of Kadane's: O(n)
 def slidingWindow(nums):
     maxSum = nums[0]

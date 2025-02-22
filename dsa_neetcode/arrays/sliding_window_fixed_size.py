@@ -1,3 +1,5 @@
+# Q: Given an array, return true if there are two elements within a window of size k that are equal
+
 # O(n)
 def sliding_window(nums, k):
     window = set()  # Cur window of size <= k
