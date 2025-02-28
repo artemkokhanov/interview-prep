@@ -7,11 +7,12 @@ class ListNode:
         self.nxt = nxt
 
 
-# https://youtu.be/G0_I-ZF0S38
-
 # time complexity O(n)
 # space complexity O(1)
 def reverseListIterativelyTwoPointer(head: Optional[ListNode]) -> Optional[ListNode]:
+    # https://youtu.be/G0_I-ZF0S38?t=91 -> visualization
+    # prev keeps track of the node that is unconnected once we move forward, initially it is set to Null
+    # curr is just an iterating pointer used to keep track where we are currently
     prev, curr = None, head
 
     while curr:  # make sure current node is not None

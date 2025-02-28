@@ -10,20 +10,22 @@ class ListNode:
 
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        dummy = node = ListNode()  # handles edge case of inserting into an empty list
+        # Handles edge case of inserting into an empty list:
+        # Node is used to create the new linked list which is a merging of the two inputted linked lists
+        # Think of node as a pointer on where to insert the next node in the merged list
+        # Dummy is used in the return statement to get the beginning of the new list
+        dummy = node = ListNode()
 
-        while list1 and list2:  # while list 1 and 2 are not empty/null
+        while list1 and list2:
             if list1.val < list2.val:
-                node.next = list1  # add node to result output
-                list1 = list1.next  # move on to next node in list1
+                node.next = list1
+                list1 = list1.next
             else:
                 node.next = list2
                 list2 = list2.next
-            node = node.next  # move to next node in result output
-            # (leaving dummy node behind)
+            node = node.next  # at this point, we have left the dummy node behind and continued with the next element in the result
 
-        # if one of the lists is emtpy at this point, we want to take the list that is not empty
-        # and append it to the result list
+        # append the linked list that is still not empty
         node.next = list1 or list2
 
         return dummy.next  # new beginning of the list (because tail we kept incrementing but dummy never moved)
