@@ -1,3 +1,6 @@
+from collections import deque
+
+
 class TreeNode:
     def __init__(self, val):
         self.val = val
@@ -85,3 +88,23 @@ def reverse_inorder(root):
     reverse_inorder(root.right)
     print(root.val)
     reverse_inorder(root.left)
+
+
+# BFS Algorithm:
+def bfs(root):
+    queue = deque()
+
+    if root:
+        queue.append(root)
+
+    level = 0
+    while queue:
+        print(f"level: {level}")
+        for i in range(len(queue)):
+            curr = queue.popleft()
+            print(curr)
+            if curr.left:
+                queue.append(curr.left)
+            if curr.right:
+                queue.append(curr.right)
+        level += 1
