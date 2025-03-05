@@ -1,7 +1,6 @@
 def top_k_frequent_elements(nums, k):
-    # index is the frequency:                                0    1    2    3    4    5    6
-    # value is list of elements that match the frequency:  [[ ], [3], [2], [1], [ ], [ ], [ ]]
     count = {}
+    # len(nums) + 1 because each number in the nums array will occur at least once, the 0 count index will not be filled
     freq = [[] for i in range(len(nums) + 1)]
 
     for num in nums:
