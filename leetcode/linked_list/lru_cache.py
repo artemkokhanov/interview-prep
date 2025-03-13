@@ -23,7 +23,7 @@ class LRUCache:
     # we will always remove a node in between two other nodes thanks to the dummy nodes
     def remove(self, node):
         prev = node.prev
-        nxt = node.nxt
+        nxt = node.next
         prev.next = nxt
         nxt.prev = prev
         # the node is now no longer in between prev and nxt
@@ -57,7 +57,7 @@ class LRUCache:
 
         if len(self.cache) > self.cap:
             # remove from list and delete/evict the LRU from the hashmap
-            lru = self.left.next
+            lru = self.left.next  # storing self.left.next in a tmp variable is extremely important
             self.remove(lru)
             del self.cache[lru.key]
 
