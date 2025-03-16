@@ -65,3 +65,8 @@ class HashMap:
         for pair in oldMap:
             if pair:
                 self.put(pair.key, pair.val)
+
+    def print(self):
+        for pair in self.map:
+            if pair:
+                print(pair.key, pair.val)
