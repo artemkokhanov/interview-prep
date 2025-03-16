@@ -4,8 +4,8 @@ from collections import deque
 class TreeNode:
     def __init__(self, val):
         self.val = val
-        self.left = None
-        self.right = None
+        self.left = None  # single link to left child
+        self.right = None  # single link to right child
 
 
 def search(root, target):
@@ -39,7 +39,7 @@ def minValueNode(root):
 
 
 def remove(root, val):
-    if not root:  # base case: in the case we do not find the node to delete?
+    if not root:
         return None
 
     if val > root.val:

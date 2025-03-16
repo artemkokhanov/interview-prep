@@ -9,7 +9,7 @@ def canReachLeaf(root):
     if not root or root.val == 0:
         return False
 
-    if not root.left and not root.right:  # found leaf node
+    if not root.left and not root.right:  # root has no children, i.e., found leaf node
         return True
     if canReachLeaf(root.left):
         return True
