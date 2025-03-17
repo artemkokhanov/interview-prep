@@ -1,5 +1,13 @@
 from collections import deque
 
+from numpy.matrixlib.defmatrix import matrix
+
+# Matrix (2D Grid)
+grid = [[0, 0, 0, 0],
+        [1, 1, 0, 0],
+        [0, 0, 0, 1],
+        [0, 1, 0, 0]]
+
 
 def bfs(grid):
     ROWS, COLS = len(grid), len(grid[0])
@@ -25,3 +33,6 @@ def bfs(grid):
                 queue.append((r + dr, c + dc))
                 visit.add((r + dr, c + dc))
         length += 1
+
+
+print(bfs(matrix))
