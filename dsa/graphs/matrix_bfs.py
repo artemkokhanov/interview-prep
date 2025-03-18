@@ -1,7 +1,5 @@
 from collections import deque
 
-from numpy.matrixlib.defmatrix import matrix
-
 # Matrix (2D Grid)
 grid = [[0, 0, 0, 0],
         [1, 1, 0, 0],
@@ -35,4 +33,4 @@ def bfs(grid):
         length += 1
 
 
-print(bfs(matrix))
+print(bfs(grid))
