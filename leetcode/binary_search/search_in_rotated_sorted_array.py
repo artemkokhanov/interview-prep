@@ -11,7 +11,7 @@ def search(nums: List[int], target: int) -> int:
             return mid
 
         # left sorted potion:
-        if nums[mid] >= nums[l]:
+        if nums[l] <= nums[mid]:
             if target > nums[mid] or target < nums[l]:
                 l = mid + 1
             else:
