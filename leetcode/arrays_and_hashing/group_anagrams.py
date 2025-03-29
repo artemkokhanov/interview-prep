@@ -13,4 +13,4 @@ def group_anagrams(strs: List[str]):
 
         result[tuple(count)].append(string)
 
-    return result.values()
+    return list(result.values())  # need to wrap with list() because in .values() returns a view not a list
