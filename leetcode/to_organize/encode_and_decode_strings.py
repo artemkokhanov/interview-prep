@@ -13,7 +13,7 @@ def decode(str):
         j = i
         while str[j] != "#":
             j += 1
-        length = int(str[i:j])
+        length = int(str[i: j])
         res.append(str[j + 1: j + 1 + length])  # j + 1 because j is the delimiter character
         i = j + 1 + length
     return res
