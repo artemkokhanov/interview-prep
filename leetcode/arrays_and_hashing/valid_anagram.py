@@ -1,3 +1,6 @@
+from collections import Counter
+
+
 def isAnagram(s: str, t: str) -> bool:
     if len(s) != len(t):
         return False
@@ -9,3 +12,7 @@ def isAnagram(s: str, t: str) -> bool:
         countT[t[i]] = 1 + countT.get(t[i], 0)
 
     return countS == countT
+
+
+def isAnagram2(s: str, t: str) -> bool:
+    return Counter(s) == Counter(t)

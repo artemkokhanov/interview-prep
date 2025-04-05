@@ -16,3 +16,9 @@ def top_k_frequent_elements(nums, k):
 
             if len(result) == k:
                 return result
+
+# Example:
+# [1,1,1,2,2,3]
+# count = {1: 3, 2: 2, 3: 1}
+#         0    1    2    3   4   5   6
+# freq = [[], [3], [2], [1], [], [], []]
