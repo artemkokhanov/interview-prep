@@ -1,12 +1,10 @@
 def reverse_linked_list(head):
-    prev, curr = None, head
+    curr = head
+    prev = None
 
     while curr:
-        nxt = curr.next
-
+        next = curr.next
         curr.next = prev
         prev = curr
-
-        curr = nxt
-
+        curr = next
     return prev
