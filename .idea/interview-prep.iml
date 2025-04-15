@@ -6,6 +6,8 @@
       <sourceFolder url="file://$MODULE_DIR$/oo_design_patterns/creational_patterns/Factory" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/oo_design_patterns/creational_patterns/singleton/PrinterService" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/oo_design_patterns/creational_patterns/Builder" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/oo_design_patterns/creational_patterns/RepititionPractice" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/oo_design_patterns/creational_patterns/singleton/EagerInitializationSingleton" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="inheritedJdk" />
