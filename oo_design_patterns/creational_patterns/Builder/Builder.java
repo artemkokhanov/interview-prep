@@ -32,7 +32,7 @@ enum Drink {
 class Meal {
 
     private Starter starter;
-    private Main main;
+    private ObserverMain main;
     private Dessert dessert;
     private Drink drink;
 
@@ -40,7 +40,7 @@ class Meal {
         return this.starter;
     }
 
-    Main getMain() {
+    ObserverMain getMain() {
         return this.main;
     }
 
@@ -56,7 +56,7 @@ class Meal {
         this.starter = starter;
     }
 
-    void setMain(Main main) {
+    void setMain(ObserverMain main) {
         this.main = main;
     }
 
@@ -94,7 +94,7 @@ class VeganMealBuilder implements Builder {
 
     @Override
     public void addMainCourse() {
-        meal.setMain(Main.VEGGIE_STIR_FRY);
+        meal.setMain(ObserverMain.VEGGIE_STIR_FRY);
     }
 
     @Override
@@ -127,7 +127,7 @@ class HealthyMealBuilder implements Builder {
 
     @Override
     public void addMainCourse() {
-        meal.setMain(Main.GRILLED_CHICKEN);
+        meal.setMain(ObserverMain.GRILLED_CHICKEN);
     }
 
     @Override
