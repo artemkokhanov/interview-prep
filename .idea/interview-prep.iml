@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/oo_design_patterns/creational_patterns/Builder" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/oo_design_patterns/creational_patterns/RepititionPractice" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/oo_design_patterns/behavioural_patterns/Observer" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/oo_design_patterns/behavioural_patterns/State" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/oo_design_patterns/behavioural_patterns/Strategy" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/oo_design_patterns/creational_patterns/Prototype/DocumentPrototype" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/oo_design_patterns/creational_patterns/Singleton/EagerInitializationSingleton" isTestSource="false" />
