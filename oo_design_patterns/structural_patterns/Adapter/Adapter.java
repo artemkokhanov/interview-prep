@@ -8,7 +8,6 @@ class XmlLogger {
     }
 }
 
-
 class LoggerAdapter implements JsonLogger {
     private final XmlLogger xmlLogger;
 

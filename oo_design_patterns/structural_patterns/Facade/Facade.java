@@ -73,7 +73,7 @@ class SmartHomeFacade {
     }
 }
 
-class SmartHomeClient {
+class FacadeClient {
 
     public static void main(String[] args) {
         SmartHomeFacade f = new SmartHomeFacade(new SmartHomeSubSystem());
