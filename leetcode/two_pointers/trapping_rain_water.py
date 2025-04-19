@@ -1,6 +1,7 @@
 from typing import List
 
 
+# runs in O(n) time where n is the length of the input list
 def trap(height: List[int]) -> int:
     if not height: return 0
 
