@@ -2,6 +2,8 @@ from collections import deque
 from typing import List
 
 
+# runs in O(M * N) where M is the number of rows and N is the number of columns
+# space complexity is O(M * N)
 def numIslands(grid: List[List[str]]) -> int:
     if not grid:
         return 0
