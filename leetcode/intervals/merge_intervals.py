@@ -1,9 +1,9 @@
 from typing import List
 
 
+# runs is O(n log(n)) because of the .sort method
 def merge(intervals: List[List[int]]) -> List[List[int]]:
-    # O(nlogn) solution where n is the number of intervals we are given because we are first sorting then iterating
-    intervals.sort(key=lambda i: i[0])  # sorting by the start values of each interval
+    intervals.sort(key=lambda i: i[0])
     result = [intervals[0]]  # avoiding edge case
 
     for start, end in intervals[1:]:
