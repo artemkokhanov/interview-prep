@@ -7,6 +7,9 @@ class ListNode:
         self.next = next
 
 
+# runs in O(N log k) time
+# N is the total number of nodes across all the linked lists
+# and k is the number of linked lists
 def mergeKLists(lists: List[ListNode]):
     if not lists or len(lists) == 0:
         return None
@@ -19,7 +22,7 @@ def mergeKLists(lists: List[ListNode]):
                 node.next = l1
                 l1 = l1.next
             else:
-                node.next = l2.val
+                node.next = l2
                 l2 = l2.next
             node = node.next
 
