@@ -1,6 +1,7 @@
 from typing import List
 
 
+# runs in O(n) time where n is the length of the input list
 def two_sum(nums: List[int], target: int) -> list[int] | None:
     prev_map = {}
 
