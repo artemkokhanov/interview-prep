@@ -29,6 +29,7 @@ def merge(arr, s, m, e):
 
     # merge the two sorted half's into the original array:
     while i < len(L) and j < len(R):
+        # <= below makes merge sort stable since we will insert left element before right one if they are equal
         if L[i] <= R[j]:
             arr[k] = L[i]
             i += 1
