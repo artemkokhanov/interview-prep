@@ -1,38 +1,54 @@
-def repetition_practice(arr, s, e):
-    if e - s + 1 <= 1:
-        return arr
-
-    m = (s + e) // 2
-
-    repetition_practice(arr, s, m)
-
-    repetition_practice(arr, m + 1, e)
-
-    merge(arr, s, m, e)
-
-    return arr
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
 
 
-def merge(arr, s, m, e):
-    leftSortedArr = arr[s: m + 1]
-    rightSortedArr = arr[m + 1: e + 1]
+def search(root, target):
+    if not root:
+        return False
 
-    i = 0  # left sorted arr pointer
-    j = 0  # right sorted arr pointer
-    k = s  # final location pointer
+    if target < root.val:
+        return search(root.left, target)
+    elif target > root.val:
+        return search(root.right, target)
+    else:
+        return True
 
-    while i < len(leftSortedArr) and j < len(rightSortedArr):
-        if leftSortedArr[i] <= rightSortedArr[j]:
-            arr[k] = leftSortedArr[i]
-            i += 1
+
+def insert(root, val):
+    if not root:
+        return TreeNode(val)
+
+    if val < root.val:
+        root.left = insert(root.left, val)
+    elif val > root.val:
+        root.right = insert(root.right, val)
+    return root
+
+
+def minValueNode(root):
+    curr = root
+    while curr.left:
+        curr = curr.left
+    return curr
+
+
+def remove(root, val):
+    if not root:
+        return None
+
+    if val < root.val:
+        root.left = remove(root.left, val)
+    elif val > root.val:
+        root.right = remove(root.right, val)
+    else:
+        if not root.left:
+            return root.right
+        elif not root.right:
+            return root.left
         else:
-            arr[k] = rightSortedArr[j]
-            j += 1
-        k += 1
-
-    while i < len(leftSortedArr):
-        arr[k] = leftSortedArr[i]
-        k += 1
-    while j < len(rightSortedArr):
-        arr[k] = rightSortedArr[j]
-        k += 1
+            minNode = minValueNode(root.right)
+            root.val = minNode.val
+            root.right = remove(root.right, minNode.val)
