@@ -1,7 +1,7 @@
 from typing import List
 
 
-# runs is O(n log(n)) because of the .sort method
+# runs is O(n*log(n)) because of the .sort method
 def merge(intervals: List[List[int]]) -> List[List[int]]:
     intervals.sort(key=lambda i: i[0])
     result = [intervals[0]]  # avoiding edge case
