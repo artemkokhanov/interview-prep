@@ -1,3 +1,4 @@
+# Time Complexity: O(n)
 def lengthOfLongestSubstring(s: str) -> int:
     charSet = set()
     L = 0
